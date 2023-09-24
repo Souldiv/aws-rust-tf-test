@@ -1,0 +1,5 @@
+/target
+/tf_config/.terraform/*
+/tf_config/.terraform.lock
+/tf_config/setup_files/terraform.tfstate
+/tf_config/.terraform.lock.hcl
