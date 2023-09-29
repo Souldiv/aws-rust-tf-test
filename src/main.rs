@@ -7,7 +7,6 @@ use chrono::{Local};
 use local_ip_address::local_ip;
 
 use std::time::SystemTime;
-use std::net::{IpAddr, Ipv4Addr};
 
 #[derive(Serialize)]
 struct NumberResponse {
@@ -83,7 +82,5 @@ fn is_prime(n: u64) -> bool {
 
 #[launch]
 async fn rocket() -> _ {
-    // let mut config = rocket::config::Config::default();
-    // config.address = IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0));
     rocket::build().mount("/", routes![index, get_is_prime, get_time, get_ip])
 }
